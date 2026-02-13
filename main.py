@@ -89,7 +89,6 @@ async def analyze_land(
                 "plot_id": plot["id"],
                 "unused_area_percentage": round(unused_pct, 2),
                 "center": plot.get("center", [0,0]),
-                "status": "Available"
             })
 
         return {
@@ -104,4 +103,5 @@ async def analyze_land(
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
